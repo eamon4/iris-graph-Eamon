@@ -22,7 +22,10 @@ Making graphs
 
 iris_scatter <- ggplot(iris, aes(x = Petal.Length, y = Petal.Width)) +
   geom_point(aes(colour = Species)) +
-  facet_wrap(~Species)
+  facet_wrap(~Species) +
+  theme_classic() +
+  labs(x = "Petal Length (unit)", y = "Petal Width (unit)")
+  
 
 iris_scatter
 
