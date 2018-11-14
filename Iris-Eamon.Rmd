@@ -21,7 +21,8 @@ Making graphs
 ```{r}
 
 iris_scatter <- ggplot(iris, aes(x = Petal.Length, y = Petal.Width)) +
-  geom_point()
+  geom_point(aes(colour = Species)) +
+  facet_wrap(~Species)
 
 iris_scatter
 
